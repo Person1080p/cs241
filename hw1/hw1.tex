@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{lipsum}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Problem}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\newlist{answer}{enumerate}{1}
+\setlist[answer]{
+  label = \textbf{Answer \arabic*.}, 
+  wide
+}
+
+\renewcommand{\qedsymbol}{Q.E.D.}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inpro}[2]{\langle#1,#2\rangle}
+\newcommand{\proj}[2]{\text{proj}_{#2}\left(#1\right)}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{CS 241 Homework 1}
+\author{Christian Gutierrez}
+\date{Spring 2022}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\begin{theorem}
+    On January 22nd 2020, I turned 22 years old. Prove that for
+any person, there is exactly one year in which they turn x years old on the x
+day of a month.
+\end{theorem}
+
+\begin{answer}
+    \item Let
+  \begin{equation}
+    x\epsilon X =[1,31]\cap Z={[1,2,3,\ldots,31]}
+  \end{equation}
+  be the day of the month on which I was born. Let 
+    Let P(x)="I will turn x years old on day x" Suppose P(x) and P(y)
+    are both true with x!=y. Then I have two diffrent birthdays, the x'th and the y'th, which is
+    impossible. Therefore if P(x) is true then it is true
+    for a unique x. My age in years takes on all possible values in X,
+    therfore there exists x such that P(x) is true.
+
+\end{answer}
+
+\begin{theorem}
+    Clearly the following proof must be incorrect, where and what is
+the error?
+\end{theorem}
+
+\begin{answer}
+    \item
+    \begin{equation}
+        \frac{d}{dx}[x+x+x+ \ldots +x] x times
+    \end{equation}
+
+    \begin{equation}
+    f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+  \end{equation}
+  \begin{equation}
+    x+x+x+\ldots+x =\sum_{i=1}^{x} x 
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{\sum_{i=1}^{x+h} (x+h)-\sum_{i=1}^{x}(x)}{h}
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{\sum_{i=1}^{x+h}(x)+\sum_{i=1}^{x+h}(h)+\sum_{i=1}^{x}(x)}{h}
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{\sum_{i=1}^{x}(x) + \sum_{i=x+1}^{x+h}(x)+\sum_{i=1}^{x+h}(h)-\sum_{i=1}^{x}(x)}{h}
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{\sum_{i=x+1}^{x+h}(x)  + \sum_{i=1}^{x+h}(h)}{h}
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{(x+x+x+\ldots+x+x)+(h+h+h+\ldots+h+h+h)}{h} x+h-x times, x+h times
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{(x+x+x+\ldots+x+x)+(h+h+h+\ldots+h+h+h)}{h} h times, x+h times
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{h*x+(x+h)*h}{h}
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{h(x+x+h)}{h}
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=\frac{h(x+x+h)}{h}
+  \end{equation}
+  \begin{equation}
+    \lim_{h\to0}=(x+x+h)
+  \end{equation}
+  \begin{equation}
+    =x+x+0
+  \end{equation}
+  \begin{equation}
+    2x=2x
+  \end{equation}
+\end{answer}
+
+\begin{proof}
+    Clearly $1=2$ is is false due it containing diffrent numbers
+    and inbetween steps 2, and 3 forgetting the limit definiton of a derivitve.
+    \[ \lim_{h\to0} \frac{f(x+h)-f(x)}{h} \] 
+    \end{proof}
+% Copy these segments for each problem
+
+% Suppose that there were a finite number of primes such that $|P|=n$. Consider the product of all prime numbers
+%     \begin{equation}
+%         k = p_1p_2p_3\ldots p_n.
+%     \end{equation}
+\newpage
+
+
+\end{document}
