@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{lipsum}
+\usepackage{enumitem} 
+
+\newtheorem{theorem}{Theorem}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+
+\newlist{answer}{enumerate}{1}
+\setlist[answer]{
+  label = \textbf{Answer \arabic*.}, 
+  wide
+}
+\newlist{negated}{enumerate}{1}
+\setlist[negated]{
+  label = \textbf{Negated Theorem \arabic*.}, 
+  wide
+}
+
+\renewcommand{\qedsymbol}{Q.E.D.}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inpro}[2]{\langle#1,#2\rangle}
+\newcommand{\proj}[2]{\text{proj}_{#2}\left(#1\right)}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{CS 241 Homework 2}
+\author{Christian Gutierrez}
+\date{Spring 2022}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+%problem 1
+\begin{theorem}
+    $\forall e_{1},e_{2},e_{1}*e_{2}$ is even
+\end{theorem}
+\begin{negated}
+  \item $\exists e_{1},e_{2},e_{1}*e_{2}$ is odd
+\end{negated}
+\begin{proof}
+    Prove P:\\
+    $e_{1} = 2n$ for some integer n \\
+    $e_{1} = 2m$ for some integer m \\
+    $e_{1}*e_{2}=2n*2m=2(2nm)=2k$ for some integer k\\
+    Clearly the product is even due to being divisible by 2\\
+\end{proof}
+
+%problem 2
+\begin{theorem}
+  Prove $\bar{P}$:\\
+  $\exists d, e| e^{d}$ is odd
+\end{theorem}
+\begin{negated}
+\item $\forall d, e| e^{d}$ is even
+\end{negated}
+\begin{proof}
+  $e^{d} = e*e*e\ldots e$ d times \\
+  which is a product containing 2 as a factor, so it is even by definition.
+\end{proof}
+
+%problem 3
+\begin{theorem}
+  $\forall a,b\exists c | a^{2}*b^{2}=c^{2}$
+\end{theorem}
+\begin{negated}
+\item $\exists a,b \forall c | a^{2}*b^{2}=c^{2}$
+\end{negated}
+\begin{proof}
+  Prove P:\\
+  $a^{2}*b^{2}=(a*b)^{2} = c^{2}$\\
+  $c=a*b$ so c exists
+\end{proof}
+
+%problem 4
+\begin{theorem}
+  $\exists c \forall a,b  | a^{2}*b^{2}=c^{2}$
+\end{theorem}
+\begin{negated}
+\item $\forall c \exists a,b  | a^{2}*b^{2}=c^{2}$
+\end{negated}
+\begin{proof}
+  Prove $\bar{P}$:\\
+  $a^{2}*b^{2}=(a*b)^{2} = c^{2}$\\
+  $ab=c$ so a and b exist
+\end{proof}
+
+
+% Copy these segments for each problem
+%Suppose that there were a finite number of primes such that $|P|=n$. Consider the product of all prime numbers
+%    \begin{equation}
+%        k = p_1p_2p_3\ldots p_n.
+%    \end{equation}
+    % Clearly $k$ is divisible by all prime numbers. Now consider the number $k+1$. Since $k$ is divisible by all primes, $k+1$ cannot be divisible by any primes, which means that $k+1$ is prime. However $k+1$ is not in our set $P$, which contradicts our claim that $P$ contained all primes. $\therefore$ there must be infinite number of primes. 
+\newpage
+
+
+\end{document}
