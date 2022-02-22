@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm} 
+
+\newtheorem{theorem}{Theorem}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+\renewcommand{\qedsymbol}{Q.E.D.}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inpro}[2]{\langle#1,#2\rangle}
+\newcommand{\proj}[2]{\text{proj}_{#2}\left(#1\right)}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{CS 241 Homework 3}
+\author{Christian Gutierrez}
+\date{Spring 2022}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+%problem 1
+\begin{theorem}
+    Let $A$,$B$ be sets. $A \triangle B = \phi$ iff $A = B$
+\end{theorem}
+\begin{proof}
+    The symmetric diffrence of $A$ and $B$ is \\
+    $A \Delta B = (A \cup B)-(A \cap B)$ \\
+    $A \Delta B = (A - B) \cup (B - A)$ \\  \\
+    Suppose $A \Delta B$ = EMPTY \\
+    Suppose $x$ is some variable and that x $\in$ A.\\
+    I claim that $x \in B$. To suppose a contradiction that $x \not\in B$.\\
+    So that $x \in A \cup B$ but $x \notin A \cap B$ \\
+    So $x \in A \Delta B$, which results in $x \in$ EMPTY. \\
+    This results in a contradiction, so $x \in B$ \\
+    So, $A \subseteq B$.\\ \\
+    For the opposite direction:\\
+    Suppose $A \Delta B$ = EMPTY \\
+    Suppose $x$ is some variable and that x $\in$ B.\\
+    I clain that $x \in A$. To suppose a contradiction that $x \not\in A$.\\
+    So that $x \in B \cup A$ but $x \notin B \cap A$ \\
+    So $x \in B \Delta A$, which results in $x \in$ EMPTY. \\
+    This results in a contradiction, so $x \in A$ \\
+    So, $B \subseteq A$. \\
+
+    Therefore: $A = B$.
+\end{proof} \newpage
+
+% problem 2
+\begin{theorem}
+  Let $S_n$= \{$x \in \mathbb{R} | 0 \leq x \leq \frac{n-1}{n}$\}. Then
+  \begin{displaymath}
+    \bigcup_{n=1}^{\infty}{S_n} = [0,1)
+  \end{displaymath}
+\end{theorem}
+\begin{proof}
+  $\bigcup_{n=1}^{\infty}{S_n} = \{x: \exists n \in N$ such that $x \in S_{n}\}$ \\
+  Let $x\in \bigcup_{n=1}^{\infty}{S_n}$. Then for some $n, x \in \{ x \in \mathbb{R}: 0 \leq x \leq \frac{n-1}{n}\}$.\\
+  Then $0 \leq x \leq \frac{n-1}{n}$. But$\frac{n-1}{n} < 1 $. \\
+  So, $0 \leq x < 1$. And $x \in [0,1)$\\
+  This shows LHS $\subseteq RHS$.\\ \\
+  Now suppose $x \in [ 0,1 )$\\
+  Then $0 \leq x< 1$\\
+  I claim that there exists n, such that $x \leq \frac{n-1}{n}$.\\
+  For $x \leq 1 - \in$ for some $\in >0$\\ \\
+  Then choose $n > 1 \frac{1}{\in}$\\
+  $\in > \frac{1}{n}$\\
+  $\frac{1-1}{n}>1-\in$\\
+  $\frac{n-1}{n}> 1-\in$\\ \\
+  Then $\frac{n-1}{n}>1-\in \leq x$ for this n.\\
+  So, $0\leq x > \frac{n-1}{n}$.\\
+  Then $x \in \{ x \in\mathbb{R} | 0 \leq x \leq \frac{n-1}{n}\}$.\\ 
+  So $x\in \bigcup_{n=1}^{\infty}{S_n} = [0,1)$
+\end{proof}
+
+
+
+% Copy these segments for each problem
+
+\newpage
+
+
+\end{document}
