@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm} 
+
+\newtheorem{theorem}{Theorem}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+\renewcommand{\qedsymbol}{Q.E.D.}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inpro}[2]{\langle#1,#2\rangle}
+\newcommand{\proj}[2]{\text{proj}_{#2}\left(#1\right)}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{CS 241 Homework 5}
+\author{Christian Gutierrez}
+\date{Spring 2022}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+% \begin{theorem}[There are Infinite Primes]
+%     Let $P$ be the set of all prime numbers. $\forall n\in\mathbb{N}$, $|P|>n$.
+% \end{theorem}
+% \begin{proof}
+%     Suppose that there were a finite number of primes such that $|P|=n$. Consider the product of all prime numbers
+%     \begin{equation}
+%         k = p_1p_2p_3\ldots p_n.
+%     \end{equation}
+%     Clearly $k$ is divisible by all prime numbers. Now consider the number $k+1$. Since $k$ is divisible by all primes, $k+1$ cannot be divisible by any primes, which means that $k+1$ is prime. However $k+1$ is not in our set $P$, which contradicts our claim that $P$ contained all primes. $\therefore$ there must be infinite number of primes. 
+% \end{proof}
+
+% Copy these segments for each problem
+\begin{theorem}
+  Let $\approx$ be an equivalence relation on a finite set A. Suppose that \\
+  \begin{equation}
+    f : A/ \approx\rightarrow A
+  \end{equation}
+  is a bijective function. Find and prove what $\approx$ is.
+\end{theorem}
+\begin{proof}Suppose we have $f^{-1}$ and are assigning pigeons to boxes.\\
+Pigeons = $A$ ; Boxes = $A/\approx$\\
+Since $f$ is a bijection, also $f^{-1}$ is.\\
+So $f^{-1}$ assigns pigeons to boxes, and there must be at least as many boxes as there are pigeons.\\
+So, $\approx$ must be equal or else there will be fewer boxes than pigeons.\\
+
+\end{proof}
+\newpage
+
+\begin{theorem}
+  Let $A$ be a finite set and $f : A \rightarrow A$. Define the sequence 
+  \begin{equation}
+    x_0, x_1, x_2, x_3 \ldots
+  \end{equation}
+  to be
+  \begin{equation}
+    x_0 \in A, x_{n+1} = f(x_n).
+  \end{equation}
+  There exists a value of N such that if $n > N$ then $x_n$ is guaranteed to be inside of an infinitely repeating cycle of the sequence.
+\end{theorem}
+\begin{proof}
+Since A is finite, $x_{N} = x_n$ for some n and N.\\
+$x_{N+j} = x_{n+j}$ for all j and for some k, N= n+k.\\
+Using induction, we can show that $x_{n+j} = x_{N+j} = x_{N+j+k} = x_{N+j+2k} = x_{N+j+3k} = \ldots$\\
+Base Case: $x_{N+j} = x_{n+j+k}$\\
+Inductive Case: $x_{n+j} = x_{n+j+mk}$
+\end{proof}
+
+
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm} 
+
+\newtheorem{theorem}{Theorem}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+\renewcommand{\qedsymbol}{Q.E.D.}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inpro}[2]{\langle#1,#2\rangle}
+\newcommand{\proj}[2]{\text{proj}_{#2}\left(#1\right)}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{CS 241 Homework 4}
+\author{Christian Gutierrez}
+\date{Spring 2022}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\begin{theorem}
+    Let $n$ be an integer such that $ n \geq 2$. Either $n$ is prime, or n can be expressed as a unique product of primes.
+\end{theorem}
+\begin{proof}
+    Let $P(n)$ where $n$ is either prime or can be expressed as a unique product of primes \\
+    $P(n)$ holds all integers where $n \geq 2$\\\\
+    Base: $P(2)$ is true becuase 2 is a number.\\\\
+    Induction: Let $P(k)$ be true for all integers $k$ with $2 \leq k \leq n$\\
+    Consider $n+1$. It is either prime or divisible by some number between 2 and n.\\
+    If $n+1$ is prime, then $P(n+1)$ is true.\\
+    If $n+1$ is divisible by some number, then suppose $n+1 = k*m$ where $k$ and $m$ are integers between $2$ and $n$.\\
+    As a result, $P(k)$ and $P(m)$ are true by the Inductive Hypothesis.\\
+    Then $k$ and $m$ are a product of primes or are prime.\\
+    So $k=p_{1}*\ldots * p_{r} $ and $ m = q_{1}*\ldots q_{s}$ where $p_{i}$ and $q_{i}$ are prime, and $r,s \geq 1$.\\
+    So $n+1= k * m = p_{1}*\ldots * p_{r} * q_{1}* \ldots * Q_{s}$ so $n+1$ is a product of primes.\\
+    Therefore, $P(n)$ is true for all $n \geq 2$
+  \end{proof}
+
+% Copy these segments for each problem
+
+\newpage
+
+\begin{theorem}
+  Let $ A \subseteq \mathbb{N}$ and $a \ne \phi$. $\exists a_{min} \in A 
+  | \forall a \ne a_{min} \in A, a_{min} < a$ 
+\end{theorem}
+\begin{proof}
+  Base: $n=1$. If $1 \in A$, then $1$ is the smallest element.\\\\
+  Induction: Assume $P(1),\ldots, P(k),\ldots,P(n)$ and $P(n+1)$\\
+  Suppose set $A \subset N $ where $A$ is non empty and contains $n+1$ as an element.\\
+  So either some number from $1,\ldots, n \in A$ or not.\\
+  If $k$ is in $A$ where $1 \leq k \leq n$ then $A$ is true by the Inductive Hypothesis\\
+  As a result, $A$ has a minimum element.
+  
+\end{proof}
+
+
+
+\end{document}
