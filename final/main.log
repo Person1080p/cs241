@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.18)  2 MAY 2022 13:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.4.18)  2 MAY 2022 14:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -220,13 +220,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Here is how much of TeX's memory you used:
  5006 strings out of 478276
  75395 string characters out of 5853013
- 561638 words of memory out of 5000000
+ 567638 words of memory out of 5000000
  23177 multiletter control sequences out of 15000+600000
  474808 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,254b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,6n,62p,2386b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (5 pages, 52678 bytes).
+Output written on main.pdf (5 pages, 62701 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream
