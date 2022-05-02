@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm} 
+
+\newtheorem{theorem}{Theorem}
+\newenvironment{amatrix}[1]{%
+  \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+  \end{array}\right)
+}
+% \newlist{background}
+% \setlist[background]{
+%   label = \textbf{Background \arabic*.}, 
+%   wide
+% }
+
+
+\renewcommand{\qedsymbol}{Q.E.D.}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\inpro}[2]{\langle#1,#2\rangle}
+\newcommand{\proj}[2]{\text{proj}_{#2}\left(#1\right)}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{CS 241 Final Project: MOBA Wave Management}
+\author{Christian Gutierrez}
+\date{Spring 2022}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\section{Background}
+cool words
+
+\newpage
+\section{Results}
+cool pictures
+
+\newpage
+\section{Summary}
+cool wrds
+
+\newpage
+\section{"Playing" with the Results}
+fun words
+
+\end{document}
