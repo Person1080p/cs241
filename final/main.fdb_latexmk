@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1651855832 "/home/chris/Documents/cs241/final/main.tex" "main.pdf" "main" 1651855832
-  "/home/chris/Documents/cs241/final/main.tex" 1651855832 4595 c058ee06a033a51c2cb49b08ac0a498b ""
+["pdflatex"] 1651856988 "/home/chris/Documents/cs241/final/main.tex" "main.pdf" "main" 1651856988
+  "/home/chris/Documents/cs241/final/main.tex" 1651856987 5976 552e95aca59fa0bdd72c2e1cf7f73338 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1647844622 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1647844622 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1647844622 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -62,8 +62,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1650306409 4408072 42ceaa83bae76aebad711d3f3dd7f55f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1650306390 2924507 03d4f9ad98820ce34e1531c5419fa9d4 ""
   "images//Crash.PNG" 1651854333 1502365 0e3ebfcf382b6c0a9472969405aafad4 ""
-  "main.aux" 1651855832 622 17e086efd9fe04657224d783b9a21a04 "pdflatex"
-  "main.tex" 1651855832 4595 c058ee06a033a51c2cb49b08ac0a498b ""
+  "main.aux" 1651856988 764 23fd89b637e087eb9b25b79d50b5661b "pdflatex"
+  "main.tex" 1651856987 5976 552e95aca59fa0bdd72c2e1cf7f73338 ""
   (generated)
   "main.aux"
   "main.log"
