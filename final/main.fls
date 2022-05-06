@@ -308,10 +308,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT ./images//Crash.PNG
-INPUT ./images//Crash.PNG
-INPUT ./images//Crash.PNG
-INPUT ./images//Crash.PNG
+INPUT ./images//PullingTheWave.PNG
+INPUT ./images//PullingTheWave.PNG
+INPUT ./images//PullingTheWave.PNG
+INPUT ./images//PullingTheWave.PNG
+INPUT ./images//PullingTheWave.PNG
 INPUT main.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
