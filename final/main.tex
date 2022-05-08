@@ -91,7 +91,7 @@ After spending some time in the custom environment, the various conditions were 
 \end{tabular}
 \end{center}
 In the end the various wave techniques have demonstrated various changes in the outcome of the wave compared to not influencing the minions. One particular result that confused me was when “Pulling the Wave”, the objective of preforming it is to create a slow push into your side by adjusting the minion targeting to focus one minion at a time. This will result in a safer position compared to a neutral wave state. However, it caused the Red side minions to take even longer to crash into the turret. Possibly this could be due to the influence of minion RNG, but more testing can delve deeper into the subject.
-\textit{Recorded Trials can be found at https://drive.google.com/drive/folders/1QYnxoKPp4oxKwOXrMW9Sc7SYKZ\\z9mZaT?usp=sharing}
+\textit{Recorded Trials can be found at \\https://drive.google.com/drive/folders/1QYnxoKPp4oxKwOXrMW9Sc7SYKZ\\z9mZaT?usp=sharing}
 \begin{table}[h]
   \includegraphics[width=\textwidth]{PullingTheWave.PNG}
   \caption[Pulling the Wave]{Using the Technique of "Pulling the Wave"}
@@ -99,11 +99,26 @@ In the end the various wave techniques have demonstrated various changes in the 
 
 \newpage
 \section{Summary}
-summarizong words\\
+The information gathered here is mostly known by higher level players that seek to play this game in a highly competitive fashion. While not exclusively reserved for elite ELO players, you too can use these techniques to gain an advantage over your enemy. For example, given a jungle player with standard pathing, you can expect them to try to contest the scuttle crab at around 3:00, and heading to bot lane at around 3:20. With the information of various initial wave adjustments, you can best set yourself up to either defend against the enemy jungle ganking your lane or prepare your lane so it is easier for your jungle or ally player to assist you in winning lane. However, when it comes to predicting where your lane will land is mostly a trick of eyeballing how much damage is needed for the lane to move in the desired direction. In the final section of this paper, we will take a deeper dive into potentially creating a formula where given some initial wave health, how would the lane push or pull and how long until the desired conditions are met.
 
 
-\newpage
+% \newpage
 \section{"Playing" with the Results}
-fun words
+Using the information gathered earlier, there seems to be potentially further analysis we can apply to the given information. Damaging a wave can have impacts if done in the correct amounts, and generally minion targeting RNG seems to be a minor factor ignoring neutral wave states. With this, I have devised a very simple formula to attempt to determine how using carryover minions from previous waves and players damaging minions to try to get a model of where a wave will land.\\
+\begin{equation}
+  \sum_{0}^{z}{(H_{e}+D_{e}) - (H_{a}+D_{a}) \pm H_{extra} * K}
+\end{equation}
+Given $z$ is number of waves calculated; $H$ for hitpoints of each wave (ally and enemy and extra per side); $D$ for damage each wave (ally and enemy); $K$ for minion pushing constant.\\
+While the above model is not perfect, and K is dependent on each wave and minion targeting, it is easier to simplify the state of the wave with an absolute number. Given more time and research, potentially a K number to accurately describe the potential of the wave in a very strong case. While arguably it would be impossible to distill various factors like minion targeting to a simple number, it is arguably accurate for the scenario. Another pitfall of distilling the entire wave to just HP of the carry over wave, it is ignoring the type of minions alive. It could be made more accurate to the HP’s of melee, caster and cannon minions. This would cause undue confusion that this model is attempting to simplify.\\
+\begin{table}[h]
+\includegraphics[width=\textwidth]{WaveCalc.PNG}
+\caption[Spreadsheet]{Spreadsheet Used with Test Data, Try it Out!}
+\end{table}
+I have also created a spreadsheet where you can mess around with various minion conditions and changes to the wave in an emulation of what a wave state will be with a graph clearly showing the movement of the wave. 
+\textit{
+  \\https://docs.google.com/spreadsheets/d/1cgwxDittMwNl9EIxlo4bZWIxIlmelYz\\MTh4pUQhSjdU/edit\#gid=546790742
+}
+While the model devised earlier is not perfect, and as a result this spreadsheet, it gives a close enough glance at the movement of waves given some initial conditions.
+
 
 \end{document}
